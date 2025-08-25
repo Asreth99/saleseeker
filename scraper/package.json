@@ -1,14 +1,28 @@
 {
+  "type": "module",
   "name": "scraper",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "scrape": "playwright test --config=playwright.config.ts --project=scrape --workers=1 --grep @scrape"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
     "@playwright/test": "^1.51.1",
-    "@types/node": "^22.13.14"
+    "@types/node": "^22.17.2",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "@extra/proxy-router": "^3.1.6",
+    "patchright": "^1.52.5",
+    "playwright": "^1.52.0",
+    "playwright-extra": "^4.3.6",
+    "puppeteer": "^24.6.1"
   }
 }
